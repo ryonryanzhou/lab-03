@@ -44,7 +44,6 @@ public class AddCityFragment extends DialogFragment {
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
 
-        // Retrieve city from arguments if editing
         if (getArguments() != null) {
             editCity = (City) getArguments().getSerializable("city");
         }
@@ -53,7 +52,6 @@ public class AddCityFragment extends DialogFragment {
         EditText editCityName = view.findViewById(R.id.edit_text_city_text);
         EditText editProvinceName = view.findViewById(R.id.edit_text_province_text);
 
-        // Pre-fill fields if editing
         if (editCity != null) {
             editCityName.setText(editCity.getName());
             editProvinceName.setText(editCity.getProvince());
